@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Restore password page</title>
+        <!--<link href="style/style.css" rel="stylesheet">-->
+        <style type="text/css">
+           body{
+              background-color: #c3e1ea;
+              background-position: center;
+              background-size: cover;
+              font-family: sans-serif;
+              margin-top: 40px;
+            }
+            .imgcontainer{
+              width: 800px;
+              background-color: rgba(7, 185, 220, 0.6);
+              margin: auto;
+              color: #FFFFFF;
+              padding: 10px 0px 10px 0px;
+              text-align: center;
+              border-radius: 15px 15px 0px 0px;
+            }
+            .img{
+              text-align: center;
+              height: 60px;
+              width: 60px;
+            }
+            #mainlog{
+              background-color: rgba(7, 185, 220, 0.5);
+              width: 800px;
+              margin: auto;
+            }
+            form{
+              padding: 10px;
+            }
+            .subbtn{
+              display: inline-block;
+              padding: 10px 20px;
+              text-align: center;
+              text-decoration: none;
+              color: #ffffff;
+              background-color: #000000;
+              border-radius: 6px;
+              outline: none;
+            }
+        </style>
+    </head>
+    <body>
+      <div class="imgcontainer">
+        <img src="./image/friend-icon-two.png" alt="Avatar" class="img">
+        <h1>Restore password</h1>
+      </div>
+      <div id="mainlog">
+        <form action="action_page.php" method="post">
+          <div class="container">
+            <label for="uname"><b>Email:</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required><br><br>
+        
+            <select name="secret" id="option" required>
+                <option disabled="disabled" selected="selected">Secret question</option>
+                <option value="birth">Your date of birth</option>
+                <option value="number">What is your favourite number?</option>
+                <option value="food">What is your favourite food?</option>
+                <option value="pet">What is the name of your first pet?</option>
+                <option value="book">What is your favourite book?</option>
+              </select><br><br>
+  
+              <label for="secret-answer"><b>The answer to the secret question:</b></label>
+              <input type="text" placeholder="Answer" name="secret-answer" id="secret-answer" required><br><br>
+        
+            <button type="submit" class="subbtn">Submit</button><br><br>
+          </div>
+        </form> 
+      </div>
+    </body>
+</html>
